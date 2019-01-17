@@ -1,8 +1,22 @@
 const numberConverter = (number) => {
   // guard clause for invalid parameter
-  if (Number.isNaN(parseInt(number, 10))) return 'error: please pass a number as a parameter';
+  if (Number.isNaN(parseInt(number, 10))) {
+    /* eslint-disable no-console */
+    console.log('error: please pass a number as a parameter');
+    return 'error: please pass a number as a parameter';
+  }
   // check if zero
-  if (parseInt(number, 10) === 0) return 'zero';
+  if (parseInt(number, 10) === 0) {
+    /* eslint-disable no-console */
+    console.log('zero');
+    return 'zero';
+  }
+  // check if number is too big
+  if (parseInt(number, 10) === 0) {
+    /* eslint-disable no-console */
+    console.log('error: number is too big');
+    return 'error: number is too big';
+  }
 
   // english numeral names
   const single = [
